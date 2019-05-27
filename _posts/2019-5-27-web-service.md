@@ -15,11 +15,12 @@ Các tài liệu và các cuốn sách khác nhau đưa ra những định nghĩ
 * Web Services là các hệ thống trao đổi thông tin bằng XML sử dụng internet cho việc tương tác trực tiếp giữa ứng dụng với ứng dụng. Hệ thống này có thể bao gồm các chương trình, đối tượng, tệp tin và văn bản.
 * Một web service là một tập hợp các giao thức và chuẩn sử dụng cho việc trao đổi dữ liệu giữa các ứng dụng và hệ thống. Các ứng dụng phần mềm được viết bằng các ngôn ngữ lập trình khác nhau và chạy trên các nền tảng khác nhau có thể sử dụng web services để trao đổi dữ liệu qua các mạng máy tính như Internet bằng cách thức tương tự như việc giao tiếp giữa các tiến trình nội bộ trong một máy tính bình thường. Khả năng tương tác này (ví dụ: giữa Java và Python, giữa các ứng dụng Windows và các ứng dụng Linux) là dựa vào việc sử dụng các chuẩn mở.
 
+
 **Để tổng kết lại thì, web services là bất cứ dịch vụ nào mà**
-* *Khả dụng qua internet hoặc mạng cá nhân (nội bộ)
-* *Không bị phụ thuộc vào bất cứ hệ điều hành hoặc ngôn ngữ lập trình nào
-* *Tự mô tả được thông qua các cú pháp XML phổ thông
-* *Có thể phát hiện bởi cơ chế tìm kiếm đơn giản>
+* *Khả dụng qua internet hoặc mạng cá nhân (nội bộ)*
+* *Không bị phụ thuộc vào bất cứ hệ điều hành hoặc ngôn ngữ lập trình nào*
+* *Tự mô tả được thông qua các cú pháp XML phổ thông*
+* *Có thể phát hiện bởi cơ chế tìm kiếm đơn giản>*
 
 
 ## Các thành phần của Web Services
