@@ -44,6 +44,8 @@ Chúng ta có thể  sử dung C# để xây dựng một web service mới trê
  
  Giả sử hệ thống này được viết trong Java và đặt ở trên một máy Solaris, đồng thời thực hiện việc tương tác với database để lưu trữ thông tin.
  
+ ![Quá trình một web service đơn giản hoạt động](http://tutorials.jenkov.com/images/web-services/web-service-message-formats-1.png)
+ 
  Các bước để thực hiện như sau:
  * Chương trình ở phía client sẽ gán thông tin đăng kí tài khoản vào một gói tin SOAP.
  * Gói tin SOAP này được gửi tới web service dưới dạng body của một HTTP POST request.
