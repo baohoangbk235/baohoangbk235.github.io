@@ -4,11 +4,11 @@ title: Web services là gì?
 subtitle: Những giới thiệu cơ bản về Web Services 
 gh-badge: [star, fork, follow]
 tags: [web service]  
-smallimg: /img/web-s.png
 comments: true
 ---
 
-Khái niệm Web Service được sử dụng rất nhiều trong quá trình phát triển một ứng dụng, đặc biệt khi chuyển đổi một ứng dụng thông thường sang ứng dụng web. Đồng thời nó cũng xuất bản các chức năng của mình để mọi người dùng internet trên thế giới đều có thể sử dụng thông qua nền tảng web. Do đó, hôm nay chúng ta sẽ c 
+Khái niệm Web Service được sử dụng rất nhiều trong quá trình phát triển một ứng dụng, đặc biệt khi chuyển đổi một ứng dụng thông thường sang ứng dụng web. Đồng thời nó cũng xuất bản các chức năng của mình để mọi người dùng internet trên thế giới đều có thể sử dụng thông qua nền tảng web. Do đó, hôm nay chúng ta sẽ cùng tìm hiểu về những khái niệm cơ bản của Web Service và nhiệm vụ của chúng.
+![Web Service](/img/web-s.png)
 
 ## Web Service là gì
 
