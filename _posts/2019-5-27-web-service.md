@@ -21,4 +21,4 @@ Các tài liệu và các cuốn sách khác nhau đưa ra những định nghĩ
 * Tự mô tả được thông qua các cú pháp XML phổ thông
 * Có thể phát hiện bởi cơ chế tìm kiếm đơn giản`
 
-## C
+## Các thành phần của Web Services
