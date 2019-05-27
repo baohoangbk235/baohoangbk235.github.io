@@ -56,3 +56,6 @@ Chúng ta có thể  sử dung C# để xây dựng một web service mới trê
  * Ứng dụng xử lý thông tin được yêu cầu và hồi dáp một con số đặc biệt cho tài khoản của khách hàng được tạo.
  * Tiếp theo, web service sẽ gói request vào một gói tin SOAP khác, gói tin này sẽ được gửi lại chương trình client để phản hồi về cho HTTP request của nó.
  * Chương trình client giải nén gói tin SOAP để nhận kết quả của quá trình đăng kí tài khoản khách hàng.
+
+## Nguồn tham khảo
+https://www.tutorialspoint.com/webservices/what_are_web_services.htm
