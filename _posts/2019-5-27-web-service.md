@@ -4,7 +4,7 @@ title: Web services là gì?
 subtitle: Những giới thiệu cơ bản về Web Services 
 gh-badge: [star, fork, follow]
 tags: [web service]  
-bigimg: /img/web-s.png
+smallimg: /img/web-s.png
 comments: true
 ---
 
