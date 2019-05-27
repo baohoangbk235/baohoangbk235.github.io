@@ -1,9 +1,10 @@
 ---
-layout:post
-title: Web Service là gì?
-subtitle: Những giới thiệu cơ bản về Web Service 
-gh-badge: [star, follow]
-tags: [web service]
+layout: post
+title: Test markdown
+subtitle: Each post also has a subtitle
+gh-repo: daattali/beautiful-jekyll
+gh-badge: [star, fork, follow]
+tags: [test]  
 comments: true
 ---
 
