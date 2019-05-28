@@ -5,16 +5,15 @@ subtitle: Những tính chất hướng đối tượng của Java
 tags: []
 comments: true
 ---
+
+`<Chẳng là mình đang không biết viết seminar về chủ đề gì, tiện hay một tuần nữa mình sẽ thi cuối kỳ môn *Lý thuyết lập trình hướng đối tượng", nên hôm nay viết bài này để mọi người cùng ôn tập với mình một chút. Hope you can enjoy it ^^.>`
+
 ## Tính kế thừa
 Trong lập trình hướng đối tượng, các chương trình máy tính được thiết kế sao cho mọi thứ đều là một object, và chúng sẽ thực hiện tương tác với nhau. Tính kế thừa ở đây cũng có thể được hiểu theo khía cạnh này, khi một thuộc tính của một lớp nào đó có thể được thừa kế bởi một lớp khác. Điều này đặc biệt hữu dụng trong việc tái sử dụng code và thiết lập mối quan hệ giữa các classes khác nhau, sẽ giúp code của bạn gọn gàng và dễ đọc hơn.
 
 ![](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2017/04/Inheritance-1-468x300.png)
 
 Như chúng ta có thể thấy trong hình vẽ,ông con thừa hưởng một số đặc tính của ông cha,ví dụ như tóc đều có màu nâu, mắt đều xanh dương, hàm én mày ngài,trán cao mũi hếch,vv... Tương tự, trong Java Lớp Con sẽ thừa hưởng các thuộc tính và phương thức mà Lớp Cha đang có. 
-
-Thừa kế được chia ra làm 4 loại chính, bạn có thể xem trong hình vẽ: Đơn thừa kế, Đa thừa vế, Thừa kế thứ bậc và thừa kế hỗn hợp.
-
-![](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2017/04/Inheritance-types-java.png)
 
 Nãy giờ chúng ta đang nói chung chung về các khái niệm. Vậy thì làm sao để thể hiện sự kế thừa trong Java? Trong Java, để thể hiện một lớp muốn kế thừa từ một lớp nào đó, bạn sử dụng từ khóa **extends**.
 
@@ -30,9 +29,139 @@ class HinhTru extends HinhTron {
  
 }
 ```
+Code trên đây là thể hiện rõ ràng cho sự kế thừa, trong đó lớp ***HinhTru*** kế thừa ***HinhTron*** bằng từ khóa ***extends***. Và theo quy luật kế thừa, thì HinhTru có thể sẽ thừa hưởng các giá trị (thuộc tính và phương thức) mà HinhTron đã khai báo. Qua mối quan hệ kế thừa như vậy, người ta có thể gọi lớp ***HinhTron*** là lớp Cơ sở (Base Class), hay lớp Cha (Parent Class). Còn lớp ***HinhTru*** được gọi là lớp Dẫn xuất (Derived Class) hay lớp Con (Subclass, Child Class).
+
+Thông thường thì các lớp cha, hay lớp cơ sở, là các lớp chứa đựng các giá trị chung, hay các giá trị cơ sở nhất cho các lớp con. Nên nếu như bạn có nhiều lớp có sự tương đồng nhất định, như Hình tròn và Hình trụ ở ví dụ trên, các lớp này đều có mặt tròn (hình trụ có hai mặt tròn), nên bạn có thể dùng ***Hình tròn*** làm lớp cơ sở (vì nó chứa các giá trị tối thiểu mà ***Hình trụ*** có thể tận dụng lại được, trong trường hợp này chính là mặt tròn). Hoặc có những trường hợp có nhiều các lớp có cùng các giá trị tương đồng, mà bạn có thể gom thành một lớp cơ sở duy nhất, rồi các lớp con chỉ việc kế thừa và sử dụng lại các giá trị tương đồng đó mà không cần phải khai báo gì thêm.
+
+
+Thừa kế được chia ra làm 4 loại chính, bạn có thể xem trong hình vẽ: Đơn thừa kế, Đa thừa vế, Thừa kế thứ bậc và thừa kế hỗn hợp.
+
+![](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2017/04/Inheritance-types-java.png)
 
 ## Tính đóng gói (Encapsulation)
+Đóng gói là cơ chế khi bạn ràng buộc dữ liệu và code với nhau thành một đơn vị độc lập. Nó có thể hiểu là việc chúng ta *giấu* dữ liệu nhằm mục đích giúp chúng an toàn hơn trước bất cứ điều chỉnh hoặc thay đổi nào. Cảm thấy khó hiểu? Hãy cùng nhìn vào ví dụ dưới đây để dễ hình dung. Hình vẽ bên dưới mô tả một viên thuốc con nhộng, ở đó phần thuốc thật sự luôn được nằm an toàn bên trong vỏ bọc con nhộng bên ngoài. Tương tự, qua việc đóng gói, các phương thức và thuộc tính của một class sẽ được giấu kín đáo và an toàn như thế.
+
+![](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2017/04/Enacapsulation-528x198.png)
+
+Chúng ta có thể thực hiện đóng gói trong Java bằng cách:
+* Khai báo biến của một class là **private**.
+* Tạo các phương thức public *setter* và *getter* để điều chỉnh và xem giá trị của biến đó.
+
+Cùng nhìn vào đoạn code dưới đây để hiểu rõ hơn về khái niệm đóng gói:
+~~~java
+public class Employee {
+ private String name;
+ public String getName() {
+ return name;
+ }
+ public void setName(String name) {
+ this.name = name;
+ }
+ public static void main(String[] args) {
+ }
+}
+~~~
+Ở đoạn code trên, class Employee được tạo với một biến name được để *private*. Sau đó, chúng ta đã tạo các phương thức getter và setter mà qua chúng, ta có thể set được giá trị của biến ***name*** hoặc lấy giá trị của nó để thực hiện các nhiệm vụ khác. Nhờ đó, bất cứ một class nào muốn truy cập biến ***name*** sẽ đều phải thông qua 2 phương thức là ***setname*** và ***getName***.
+
+## Tính trìu tượng hóa (Abstraction) 
+***Trừu tượng*** trong thực tế còn có thể hiểu là cái gì đó không có thực. Vậy tính ***Trừu tượng*** trong OOP ý muốn nói đến một lớp nào đó mang một đặc tính trừu tượng, không có thực. Thực ra thì lớp ***Trừu tượng*** vẫn có tồn tại, vẫn là một lớp thôi. Nhưng nó trừu tượng ở chỗ, nó không thể được dùng để tạo ra các đối tượng như những lớp bình thường khác. Lớp ***Trừu tượng*** khi này chỉ là cái “xác không hồn”, hay bạn có thể hiểu nó chỉ là một cái sườn, để mà bạn có thể tạo ra các lớp con của nó dựa vào sự ràng buộc từ cái sườn này. Đồng thời, trong một ***lớp trừu tượng*** có thể bao gồm cả ***lớp trừu tượng*** và ***lớp cụ thể***.
+Để sử dụng một lớp trừu tượng, bạn cần thừa kế nó từ một lớp khác mà ở đó bạn implement phương thức trừu tượng của chính nó, còn không thì nó sẽ trở thành lớp trừu tượng.
+Cùng xem qua cú pháp để khai báo lớp trừu tượng:
+
+```java
+Abstract class Mobile {   // abstract class mobile
+Abstract void run();      // abstract method
+```
+ **Interface**: Interface trong Java là một bản phác thảo của class hay có thể nói nó là một tập hợp các ***phương thức trừu tượng*** và ***static constants***. Trong một interface, mỗi phương thức đều là ***public*** và ***abstract*** nhưng nó không chứa bất kì ***constructor*** nào. Cùng tính trừu tượng hóa, interface cũng giúp chúng ta đạt được nhiều tính kế thừa trong Java.
+Tóm lại, **Interface** đơn giản là một tập hợp các phương thức liên quan đên nhau mà chúng không có thân hàm. Cùng nhìn qua ví dụ sau về Interface:
+
+```java
+public interface ParentCar {
+public void changeGear( int newValue);
+public void speedUp(int increment);
+public void applyBrakes(int decrement);
+}
+```
+Nhìn qua, ta có thể thấy, những phương thức trên đều cần cho bất kì một chiếc xe nào. Nhưng cách thức chúng hoạt động đối với mỗi chiếc xe lại không hề giống nhau. 
+Giả dụ như bạn đang lái một chiếc xe thủ công, thì bạn hiển nhiên sẽ phải thực hiện đổi số lần lượt từng cái một, nhưng nếu chiếc xe bạn đang lái là một chiếc xe tự lái của Tesla thì khi đó hệ thống lái xe của bạn sẽ tự động thực hiện thay đổi số dựa trên tốc độ mà không cần bất cứ một tác động nào từ lái xe. Vì thé, không phải bất cứ class con nào của ***Parent Car*** đều sử dụng chung logic khi tạo phương thức ***changeGear***. Tương tự, với ***speedUp***, bây giờ giả dụ như khi đang chạy xe trên phố cổ Hà Nội, đột nhiên bạn nhận ra bằng một cách nào đó đường thông hè thoáng một cách lạ thường, vậy là bạn quyết định nhấn ga tăng tốc, nó sẽ tăng tốc 10kms hoặc 15kms trên giờ. Nhưng với một tay đại gia nào đó sở hữu một chiếc ***Ferrari 488 GTB*** thì nó có thể tăng tốc đến 30kms hay 50kms lận. Tương tự đối với phương thức ***applyBrakes*** còn lại.
+
+Và vì tất cả các chức năng này đều là cần thiết và phổ thông với tất cả các ***Xe con***, ta sẽ tạo một interface ***Xe Cha*** mà ở đó tất cả các phương thức trên đều hiện diện. Sau đó, chúng ta sẽ tạo ra các class con riêng, ở đó ta sẽ thực hiện Interface này bằng việc thay đổi các phương thức tương ứng. 
+Hãy cùng nhìn xem ta có thể thực hiện Interface này thế nào nhé. Ví dụ dưới đây là khi bạn tạo một chiếc Ferrari:
+```java
+public class Ferrari implements ParentCar {
+int speed=0;
+int gear=1;
+public void changeGear( int value){
+gear=value;
+}
+public void speedUp( int increment)
+{
+speed=speed+increment;
+}
+public void applyBrakes(int decrement)
+{
+speed=speed-decrement;
+}
+void printStates(){
+System.out.println("speed:"+speed+"gear:"+gear);
+}
+public static void main(String[] args) {
+// TODO Auto-generated method stub
+Audi A6= new Audi();
+A6.speedUp(50);
+A6.printStates();
+A6.changeGear(4);
+A6.SpeedUp(100);
+A6.printStates();
+}
+}
+```
+Cuối cùng, chúng ta đến với thuộc tính cuối cùng trong hướng đối tượng, ***Đa hình***.
+
+## Tính Đa hình (Polymorphism)
+***Đa hình*** nghĩa là có nhiều hình dạng, hình thái khác nhau. Ở đây đề cập đến khả năng có nhiều hình thái, định dạng khác nhau của biến, phương thức hoặc đối tượng trong Java. Trong thực tế, sự Đa hình được xem như một đối tượng đặc biệt, có lúc đối tượng này mang một hình dạng (trở thành một đối tượng) nào đó, và cũng có lúc đối tượng này lại mang một hình dạng khác nữa, tùy vào từng hoàn cảnh. Sự “nhập vai” vào các hình dạng (đối tượng) khác nhau này giúp cho đối tượng Đa hình ban đầu có thể thực hiện những hành động khác nhau của từng đối tượng cụ thể.  Nói cách khác, ***Đa hình*** nghĩa là bạn có thể định nghĩa một Interface hay phương thức mà chúng có thể có nhiều cách thực hiện khác nhau. 
+Ví dụ: Ở Infore, một thành viên của team Metric có thể kiêm nhiều nhiệm vụ khác nhau, bình thường thì làm phân tích báo cáo cho khách hàng, nhưng khi khác lại hoàn toàn có thể thực hiện việc truyền thông hay marketing. Nếu bạn hỏi thành viên đó công việc hiện tại trong team đang làm là gì, họ sẽ dựa vào thông tin trên để trả lời bạn.
 
 
+![](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2017/04/Polymorphism-example.png)
 
+Đến đây chắc chắn bạn đã hiểu sơ bộ khái niệm Đa hình. Vậy thì trong OOP chúng ta tổ chức và sử dụng đặc tính Đa hình này như thế nào?
 
+Thứ nhất, ***Đa hình*** sẽ gắn liền với kế thừa. Và, ***Đa hình*** cũng sẽ gắn liền với ghi đè phương thức (***overriding***) nữa. Bởi vì như trên đây có nói đó, Đa hình là nói đến một đối tượng nào đó có khả năng nhập vai thành các đối tượng khác. Vậy thì để mà một đối tượng có thể là một đối tượng nào đó, ắt hẳn nó phải là đối tượng cha. Và để đối tượng cha có thể là một trong các đối tượng con ở từng hoàn cảnh, thì nó phải định nghĩa ra các phương thức để con của nó có thể ghi đè. Điều này giúp hệ thống xác định được đối tượng nào và phương thức nào thực sự đang hoạt động khi ứng dụng đang chạy. Nên nhiều tài liệu gọi Đa hình này là Đa hình tại runtime là vậy.
+
+Chúng ta sẽ đến ví dụ sau cho dễ hiểu hơn. Ví dụ khá đơn giản. Lớp ***HinhHoc*** là lớp cha, hai lớp con ***HinhTron*** và ***HinhChuNhat*** đều override phương thức ***tinhDienTich()*** từ cha.
+
+![](https://i0.wp.com/yellowcodebooks.com/wp-content/uploads/2017/09/Blank-Diagram-Page-2.png?w=566&ssl=1)
+
+* ***HinhHoc***
+```java
+public class HinhHoc {
+     
+    public void tinhDienTich() {
+        System.out.println("Chưa biết hình nào");
+    }
+}
+```
+* ***HinhTron***
+```java
+public class HinhTron extends HinhHoc {
+     
+    @Override
+    public void tinhDienTich() {
+        System.out.println("Đây là Diện tích hình Tròn");
+    }
+  
+}
+```
+* ***HinhChuNhat***
+```java
+public class HinhChuNhat extends HinhHoc {
+  
+    @Override
+    public void tinhDienTich() {
+        System.out.println("Đây là Diện tích hình Chữ nhật");
+    }
+ 
+}
+```
+*Trên đây là toàn bộ bài viết các tính chất hướng đối tượng trong Java, cảm ơn mọi người đã theo dõi đến tận đây. Rất mong nhận được góp ý của tất cả mọi người,chúc ai sắp thi cuối kỳ môn OOP sẽ đạt được điểm cao trong kỳ thi sắp tới và hy vọng trong đó có mình hehe. Good night ^^~ !*
