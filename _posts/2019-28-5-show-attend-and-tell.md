@@ -8,7 +8,7 @@ comments: true
 
 `Chẳng là mình đang không biết viết seminar về chủ đề gì, tiện hay một tuần nữa mình sẽ thi cuối kỳ môn "Lý thuyết lập trình hướng đối tượng", nên hôm nay viết bài này để mọi người cùng ôn tập với mình một chút. Hope you can enjoy it ^^.`
 
-## Tính kế thừa
+## Tính kế thừa (Inheritance)
 Trong lập trình hướng đối tượng, các chương trình máy tính được thiết kế sao cho mọi thứ đều là một object, và chúng sẽ thực hiện tương tác với nhau. Tính kế thừa ở đây cũng có thể được hiểu theo khía cạnh này, khi một thuộc tính của một lớp nào đó có thể được thừa kế bởi một lớp khác. Điều này đặc biệt hữu dụng trong việc tái sử dụng code và thiết lập mối quan hệ giữa các classes khác nhau, sẽ giúp code của bạn gọn gàng và dễ đọc hơn.
 
 ![](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2017/04/Inheritance-1-468x300.png)
