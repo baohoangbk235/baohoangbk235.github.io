@@ -31,9 +31,9 @@ Cross-entropy có thể được biểu diễn bởi đường màu xanh da tr�
 - Quay trở lại hình 1 ban đầu, hàm focal loss được mô tả với các giá trị khác nhau của gamma với các giá trị từ 0 đến 5, trong đó với 0 chính là hàm cross-entropy như đã được mô tả bên trên. Chúng ta chú ý đến 2 tính chất của hàm focal loss:
 Khi một mẫu bị phân loại sai và pt nhỏ, modulating factor gần 1 và loss sẽ không bị ảnh hưởng. Còn khi pt tiến tới 1, tức các trường hợp được phân loại tốt, moduling factor sẽ tiến tới 0 và hàm loss trong trường hợp này sẽ bị giảm trọng số xuống.
 
-Tham số focusing gamma sẽ điều chỉnh tỷ lệ các trường hợp được phân loại tốt được giảm trọng số. Khi gamma càng tăng thì ảnh hưởng của *modulating factor cũng tăng. Thực nghiệm cho thấy với gamma = 2 thì kết quả đạt được sẽ tốt nhất.
+  - Tham số focusing gamma sẽ điều chỉnh tỷ lệ các trường hợp được phân loại tốt được giảm trọng số. Khi gamma càng tăng thì ảnh hưởng của *modulating factor cũng tăng. Thực nghiệm cho thấy với gamma = 2 thì kết quả đạt được sẽ tốt nhất.
 
-Focal Loss thường được sử dụng kết hợp với Feature Pyramid Network trong RetinaNet. Kết quả khi so sánh RetinaNet sử dụng focal loss của chúng ta với các mô hình two-stage và one-stage không sử dụng focal loss khác:
+  - Focal Loss thường được sử dụng kết hợp với Feature Pyramid Network trong RetinaNet. Kết quả khi so sánh RetinaNet sử dụng focal loss của chúng ta với các mô hình two-stage và one-stage không sử dụng focal loss khác:
 
 ![](https://forum.machinelearningcoban.com/uploads/default/optimized/2X/b/b84e1a287302135a8379e708919b37524d2f63c3_2_690x429.png)
 
